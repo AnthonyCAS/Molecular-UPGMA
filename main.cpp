@@ -158,6 +158,12 @@ class Upgma  {
               cout << endl;
           }
       }
+      ~Upgma() {
+          for (size_t i = 0; i < this->row; ++i) {
+            delete[] this->matriz[i];
+          }
+          delete[] this->matriz;
+      }
 };
 
 int main() {
